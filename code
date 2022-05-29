@@ -1,0 +1,46 @@
+import random
+secenek =["tas","kagıt","makas"]
+tas=secenek[0]
+kagıt=secenek[1]
+makas=secenek[2]
+print("tas kagıt makas oyununa hoş geldiniz.  Oyunu bitirmek için e tuşuna basınız")
+
+print("""""""""""""""""""""""""""""""""""")
+while True :
+    secim =input("Taş  ,Kağıt , Makas bunlardan hangisini seçiyorsun   " )
+    bil_secim=random.choice(secenek)
+    if secim == bil_secim:
+      print("bilgisayarın seçimi "+bil_secim)
+      print("berabere")
+      print("""""""""""""""""""""""""""""""""""")
+      break
+     
+    if secim == tas:
+        if bil_secim == kagıt:
+            print("bilgisayarın seçimi "+bil_secim)
+            print("kaybettin")
+            print("""""""""""""""""""""""""""""""""""")
+        else:
+                print("bilgisayarın seçimi "+bil_secim)
+                print("kazandın")
+                print("""""""""""""""""""""""""""""""""""")
+    if secim == kagıt:
+        if bil_secim == makas:
+            print("bilgisayarın seçimi "+bil_secim)
+            print("kaybettin")
+            
+            
+        else:
+                print("bilgisayarın seçimi "+bil_secim)
+                print("kazandın")
+    if secim == makas:
+        if bil_secim == tas:
+            print("bilgisayarın seçimi "+bil_secim)
+            print("kaybettin")
+        else:
+                print("bilgisayarın seçimi "+bil_secim)
+                print("kazandın")
+    
+    if secim == "e":
+        break
+        
